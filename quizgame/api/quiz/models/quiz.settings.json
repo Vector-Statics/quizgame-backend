@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quizzes",
+  "info": {
+    "name": "Quiz",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Question": {
+      "type": "richtext",
+      "required": true
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": false,
+      "private": false
+    },
+    "question_choices": {
+      "collection": "question-choices",
+      "via": "quiz"
+    },
+    "student_answers": {
+      "collection": "student-answers",
+      "via": "quiz"
+    },
+    "score": {
+      "type": "integer",
+      "required": true,
+      "min": 10,
+      "default": 10
+    },
+    "quiz_id": {
+      "type": "uid",
+      "required": false
+    }
+  }
+}
