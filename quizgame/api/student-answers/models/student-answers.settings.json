@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Scoring",
+  "info": {
+    "name": "Student Answers"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "stopwatch": {
+      "type": "datetime",
+      "required": true
+    },
+    "users_permissions_user": {
+      "unique": true,
+      "columnName": "student",
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "student_answers"
+    },
+    "quiz": {
+      "via": "student_answers",
+      "model": "quiz"
+    },
+    "question_choices": {
+      "collection": "question-choices",
+      "via": "student_answer"
+    },
+    "is_correct": {
+      "type": "boolean",
+      "required": true
+    }
+  }
+}

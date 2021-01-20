@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "question_choices",
+  "info": {
+    "name": "Question Choices"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "choice": {
+      "type": "richtext"
+    },
+    "is_right_choice": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "quiz": {
+      "via": "question_choices",
+      "model": "quiz"
+    },
+    "student_answer": {
+      "via": "question_choices",
+      "model": "student-answers"
+    }
+  }
+}
