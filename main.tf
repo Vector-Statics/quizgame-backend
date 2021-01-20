@@ -1,7 +1,4 @@
 terraform {
-  backend "remote" {
-    organization = "Vector-Statics"
-  }
   required_providers {
     google = {
       source = "hashicorp/google"
