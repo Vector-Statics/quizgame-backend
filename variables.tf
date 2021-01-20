@@ -4,5 +4,5 @@ variable "credentials" {
 
 variable "project_id" {
     type = string
-    default = "quiz-game-301913"
+    # default = "quiz-game-301913"
 }
