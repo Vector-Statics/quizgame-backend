@@ -41,7 +41,7 @@ jobs:
     - name: Terraform Plan
       run: terraform plan
 
-      # On push to main, build or change infrastructure according to Terraform configuration files
+      # On push to main, build or change infrastructure according to Terraform configuration files. Note: We do not need to Terraform destroy where needed.
     - name: Terraform Apply
       id: launch
       run: terraform apply -auto-approve
