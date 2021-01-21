@@ -12,7 +12,7 @@ provider "google" {
   # credentials = file("quiz-game-service-account.json")
   credentials = var.credentials
 
-  project = var.project_id #"quiz-game-301913"
+  project = var.project_id
   region  = "us-central1"
   zone    = "us-central1-c"
 }
